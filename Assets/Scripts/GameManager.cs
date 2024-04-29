@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameOverCanvas.enabled = false;
+        secuenciaCanvas.enabled = false;
         SecuenciaRandom();
     }
 
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
             if(position >= secuencia.Length) {
                 Debug.Log("Juego terminado");
                 gameOverCanvas.enabled = true;
+                secuenciaCanvas.enabled = false;
 
             }
         }
